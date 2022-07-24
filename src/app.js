@@ -82,3 +82,20 @@ function updateCity(event) {
 
 let searchButton = document.querySelector("#search-form");
 searchButton.addEventListener("submit", updateCity);
+
+//to show current geolaction and temperature there
+function showPosition() {
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+function searchLocation(position) {
+  let apiKey = "7017d65a526be0558677d25fee70c883";
+  let units = "metric";
+  let lon = position.coords.longitude;
+  let lat = position.coords.latitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(showWeather);
+}
+let buttonCurrLocation = document.querySelector(".btn-location");
+buttonCurrLocation.addEventListener("click", showPosition);
