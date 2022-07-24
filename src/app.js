@@ -79,10 +79,12 @@ function updateCity(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showWeather);
 }
+//to show weather in Kyiv by default
 let apiKey = "7017d65a526be0558677d25fee70c883";
 let city = "Kyiv";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 axios.get(apiUrl).then(showWeather);
+
 let searchButton = document.querySelector("#search-form");
 searchButton.addEventListener("submit", updateCity);
 
