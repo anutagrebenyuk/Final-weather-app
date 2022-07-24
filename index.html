@@ -16,12 +16,50 @@
       href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e2b009a650.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Weather Forecast</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <h1>Hello World</h1>
+    <div class="container card" style="width: 70%">
+      <div class="row">
+        <div class="col-3">
+          <span id="temperature">19</span>
+          <span class="units">
+            <a href="#">°C</a>
+            |
+            <a href="#">°F</a>
+          </span>
+        </div>
+
+        <div class="col-3">
+          <ul class="details">
+            <li>Feels like: <span id="feels-like"></span> °</li>
+            <li>
+              <i class="fa-solid fa-umbrella"></i> Humidity:
+              <span id="humidity"></span>%
+            </li>
+            <li>
+              <i class="fa-solid fa-wind"></i> Wind:
+              <span id="wind"></span> km/h
+            </li>
+            <li>
+              <i class="fa-solid fa-rainbow"></i>
+              <span id="description"> Clouds</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-4" id="main-info">
+          <h2 id="city">Kyiv</h2>
+          <h3 id="curr-date">Monday, 27 June 2022</h3>
+        </div>
+      </div>
+    </div>
     <script src="src/app.js"></script>
   </body>
 </html>

@@ -1,0 +1,55 @@
+body {
+  font-family: "Secular One", sans-serif;
+  color: #4d4c7d;
+}
+
+h3 {
+  font-size: 16px;
+}
+ul {
+  list-style: none;
+  font-size: 16px;
+  padding: 20px 0 0 0;
+}
+.container {
+  background: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 3px 3px 12px grey;
+}
+#city {
+  font-size: 50px;
+}
+#search-form {
+  margin: 15px 0 30px 0;
+}
+#icon {
+  border: 2px solid #454f974c;
+  border-radius: 10px;
+}
+#main-info {
+  position: relative;
+  top: 15px;
+  right: 40px;
+  text-align: right;
+}
+#description {
+  text-transform: capitalize;
+}
+#temperature {
+  position: relative;
+  top: 0px;
+  font-family: monospace;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+ul.details {
+  position: relative;
+  top: 15px;
+  font-size: 14px;
+  padding: 0px;
+  font-weight: lighter;
+}
