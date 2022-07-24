@@ -11,7 +11,12 @@ ul {
   font-size: 16px;
   padding: 20px 0 0 0;
 }
-
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: grey;
+  padding: 30px 0 0 0;
+}
 a {
   text-decoration: none;
 }
@@ -43,7 +48,20 @@ a {
 #forecast-container {
   margin-top: 50px;
 }
-
+.units {
+  position: relative;
+  top: -30px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.units .active {
+  color: grey;
+  cursor: default;
+}
+.units .active:hover {
+  text-decoration: none;
+}
 ul.details {
   position: relative;
   top: 15px;

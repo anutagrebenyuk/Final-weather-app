@@ -79,7 +79,10 @@ function updateCity(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showWeather);
 }
-
+let apiKey = "7017d65a526be0558677d25fee70c883";
+let city = "Kyiv";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+axios.get(apiUrl).then(showWeather);
 let searchButton = document.querySelector("#search-form");
 searchButton.addEventListener("submit", updateCity);
 
@@ -99,3 +102,33 @@ function searchLocation(position) {
 }
 let buttonCurrLocation = document.querySelector(".btn-location");
 buttonCurrLocation.addEventListener("click", showPosition);
+
+//Units conversion
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+  document.querySelector("#feels-like").innerHTML = Math.round(
+    (feelsLikeTemp * 9) / 5 + 32
+  );
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+}
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature");
+  tempElement.innerHTML = Math.round(celsiusTemp);
+  document.querySelector("#feels-like").innerHTML = Math.round(feelsLikeTemp);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+}
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
+
+let celsiusTemp = null;
+let feelsLikeTemp = null;
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
