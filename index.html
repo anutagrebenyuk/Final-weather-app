@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,23 +17,57 @@
       href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>weather</title>
     <script
       src="https://kit.fontawesome.com/e2b009a650.js"
       crossorigin="anonymous"
     ></script>
-    <title>Weather Forecast</title>
-    <link rel="stylesheet" href="src/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container card" style="width: 70%">
+      <div class="card-body">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <div class="input-group mb-3" id="enterCityForm">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Enter the city"
+                  autofocus="on"
+                  autocomplete="off"
+                  id="cityEntered"
+                />
+              </div>
+            </div>
+            <div class="col-auto">
+              <input
+                class="form-control btn-weather"
+                type="submit"
+                value="Check weather"
+                id="checkWeather"
+              />
+            </div>
+        </form>
+        <div class="col-auto">
+          <button class="btn-location">Current location</button>
+        </div>
+      </div>
+
       <div class="row">
+        <div class="col-2">
+          <img src="" alt="" id="icon" class="float-left" />
+        </div>
+
         <div class="col-3">
           <span id="temperature">19</span>
           <span class="units">
-            <a href="#">°C</a>
+            <a href="#" id="celsius-link" class="active">°C</a>
             |
-            <a href="#">°F</a>
+            <a href="#" id="fahrenheit-link">°F</a>
           </span>
         </div>
 
@@ -57,6 +92,46 @@
         <div class="col-4" id="main-info">
           <h2 id="city">Kyiv</h2>
           <h3 id="curr-date">Monday, 27 June 2022</h3>
+        </div>
+      </div>
+      <br />
+      <div id="forecast-container">
+        <div class="row days">
+          <div class="col-2">Tu</div>
+          <div class="col-2">We</div>
+          <div class="col-2">Th</div>
+          <div class="col-2">Fr</div>
+          <div class="col-2">Sa</div>
+          <div class="col-2">Su</div>
+        </div>
+        <div class="row">
+          <div class="col-2 emoji">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+          <div class="col-2 emoji">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+          <div class="col-2 emoji">
+            <i class="fa-solid fa-cloud-sun-rain"></i>
+          </div>
+          <div class="col-2 emoji">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <div class="col-2 emoji">
+            <i class="fa-solid fa-cloud-rain"></i>
+          </div>
+          <div class="col-2 emoji">
+            <i class="fa-solid fa-cloud-sun-rain"></i>
+          </div>
+        </div>
+
+        <div class="row temperature">
+          <div class="col-2 individTemp">25°C</div>
+          <div class="col-2 individTemp">24°C</div>
+          <div class="col-2 individTemp">20°C</div>
+          <div class="col-2 individTemp">23°C</div>
+          <div class="col-2 individTemp">19°C</div>
+          <div class="col-2 individTemp">19°C</div>
         </div>
       </div>
     </div>
