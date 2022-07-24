@@ -11,6 +11,10 @@ ul {
   font-size: 16px;
   padding: 20px 0 0 0;
 }
+
+a {
+  text-decoration: none;
+}
 .container {
   background: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
   margin: 50px auto;
@@ -36,6 +40,36 @@ ul {
 #description {
   text-transform: capitalize;
 }
+#forecast-container {
+  margin-top: 50px;
+}
+
+ul.details {
+  position: relative;
+  top: 15px;
+  font-size: 14px;
+  padding: 0px;
+  font-weight: lighter;
+}
+
+.days {
+  font-family: monospace;
+  font-size: 14px;
+  text-align: center;
+}
+.emoji {
+  color: #454e97e7;
+  font-size: 30px;
+  text-align: center;
+}
+
+.individTemp {
+  font-family: monospace;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+}
+
 #temperature {
   position: relative;
   top: 0px;
@@ -46,10 +80,31 @@ ul {
   margin: 0 auto;
   padding: 0;
 }
-ul.details {
-  position: relative;
-  top: 15px;
+
+#checkWeather {
+  background: #dbdffd;
+  transition: all 200ms ease-in-out;
+  border: 1px solid #646fd4;
+  border-radius: 8px;
+  padding: 7px 23px;
+  color: #646fd4;
   font-size: 14px;
-  padding: 0px;
-  font-weight: lighter;
+}
+
+#checkWeather:hover {
+  background: #565da0;
+  color: #fff;
+}
+.btn-location {
+  background: #565da0;
+  transition: all 200ms ease-in-out;
+  color: #fff;
+  border: 1px solid #646fd4;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 7px 10px;
+}
+.btn-location:hover {
+  background: #dbdffd;
+  color: #646fd4;
 }
