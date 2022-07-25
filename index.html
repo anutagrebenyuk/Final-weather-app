@@ -51,6 +51,7 @@
                 id="checkWeather"
               />
             </div>
+          </div>
         </form>
         <div class="col-auto">
           <button class="btn-location">Current location</button>
@@ -95,46 +96,28 @@
         </div>
       </div>
       <br />
-      <div id="forecast-container">
-        <div class="row days">
-          <div class="col-2">Tu</div>
-          <div class="col-2">We</div>
-          <div class="col-2">Th</div>
-          <div class="col-2">Fr</div>
-          <div class="col-2">Sa</div>
-          <div class="col-2">Su</div>
-        </div>
+      <div class="forecast-container">
         <div class="row">
-          <div class="col-2 emoji">
-            <i class="fa-solid fa-sun"></i>
-          </div>
-          <div class="col-2 emoji">
-            <i class="fa-solid fa-sun"></i>
-          </div>
-          <div class="col-2 emoji">
-            <i class="fa-solid fa-cloud-sun-rain"></i>
-          </div>
-          <div class="col-2 emoji">
-            <i class="fa-solid fa-cloud"></i>
-          </div>
-          <div class="col-2 emoji">
-            <i class="fa-solid fa-cloud-rain"></i>
-          </div>
-          <div class="col-2 emoji">
-            <i class="fa-solid fa-cloud-sun-rain"></i>
+          <div class="col-2">
+            <div class="forecast-days">Tue</div>
+            ;
+            <div><img src="" alt="" id="icon" class="float-left" /></div>
+            <div class="forecast-temperature">
+              <span class="forecast-temperature-max">18</span>
+              <span class="forecast-temperature-min"></span>12
+            </div>
           </div>
         </div>
-
-        <div class="row temperature">
-          <div class="col-2 individTemp">25°C</div>
-          <div class="col-2 individTemp">24°C</div>
-          <div class="col-2 individTemp">20°C</div>
-          <div class="col-2 individTemp">23°C</div>
-          <div class="col-2 individTemp">19°C</div>
-          <div class="col-2 individTemp">19°C</div>
-        </div>
-         <footer>This is an <a href="https://github.com/anutagrebenyuk/Final-weather-app" target="_blank"> open source</a> code by Hanna Hrebeniuk</footer>
       </div>
+      <footer>
+        This is an
+        <a
+          href="https://github.com/anutagrebenyuk/Final-weather-app"
+          target="_blank"
+          >open source</a
+        >
+        code by Hanna Hrebeniuk
+      </footer>
     </div>
     <script src="src/app.js"></script>
   </body>
