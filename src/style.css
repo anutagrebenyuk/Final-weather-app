@@ -78,29 +78,11 @@ ul.details {
   font-size: 16px;
   opacity: 0.7;
 }
-.forecast-temperature {
-  font-size: 13 px;
+.weather-forecast-temperatures {
+  font-size: 15 px;
 }
-.forecast-temperature-min {
+.weather-forecast-temperature-min {
   opacity: 0.7;
-}
-
-.days {
-  font-family: monospace;
-  font-size: 14px;
-  text-align: center;
-}
-.emoji {
-  color: #454e97e7;
-  font-size: 30px;
-  text-align: center;
-}
-
-.individTemp {
-  font-family: monospace;
-  font-size: 14px;
-  text-align: center;
-  text-decoration: none;
 }
 
 #temperature {
