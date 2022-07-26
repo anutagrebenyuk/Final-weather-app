@@ -66,11 +66,11 @@ function showWeather(response) {
   cityElement.innerHTML = response.data.name;
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute(
     "alt",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
   );
 
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
@@ -80,26 +80,26 @@ function showWeather(response) {
 
   getCoordinates(response.data.coord);
 }
+//to display forecast for next days
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+  console.log(forecast);
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       ` <div class="col">
-        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-date">${forecastDay.dt}</div>
         <img
-          src="http://openweathermap.org/img/wn/50d@2x.png"
-          alt=""
+          src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+          alt="https://openweathermap.org/img/wn/${forecastDay.weather[0].description}@2x.png"
           width="42"
         />
         <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max"> 18° </span>
-          <span class="weather-forecast-temperature-min"> 12° </span>
+          <span class="weather-forecast-temperature-max">${forecastDay.temp.max}° </span>
+          <span class="weather-forecast-temperature-min"> ${forecastDay.temp.max}° </span>
         </div>
       </div>
   `;
