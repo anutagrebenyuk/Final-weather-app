@@ -21,7 +21,7 @@ a {
   text-decoration: none;
 }
 .container {
-  background: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  background: linear-gradient(to top, #a8edea9e 0%, #f8bde347 100%);
   margin: 50px auto;
   border-radius: 10px;
   box-shadow: 3px 3px 12px grey;
